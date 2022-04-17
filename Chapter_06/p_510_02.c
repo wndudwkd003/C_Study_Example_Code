@@ -21,7 +21,7 @@ void string_del_space(char* str, int size)
     char* tmp_str = (char*)malloc(sizeof(char) * size); // str문자열과 동일한 크기의 문자열을 동적할당
     int index = 0;  // 동적할당한 문자열에 순서대로 문자를 넣기 위한 인덱스
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i <= size; i++)
     {
         if (str[i] != ' ' || str[i] == '\0')
         {
@@ -29,7 +29,7 @@ void string_del_space(char* str, int size)
         }
         str[i] = '\0';  // 원래 문자열은 전부 널문자로 채워넣음
     }
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 0; i <= size; i++)
     {
         str[i] = tmp_str[i];    // 동작 할당 문자열에서 원래 문자열로 복사
     }
